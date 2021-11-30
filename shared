@@ -1,0 +1,116 @@
+# كل ما يحصله اللاعب عند اول تسجيل 
+QBShared.StarterItems = { -- The items given to the player on first creation
+    ['phone'] = {amount = 1, item = 'phone'},
+    ['id_card'] = {amount = 1, item = 'id_card'},
+    ['driver_license'] = {amount = 1, item = 'driver_license'},
+}
+
+# الادوات و كل الايتمز الموجودة في السرفر و يجب اضافة اي جديد هنا
+QBShared.Items = {
+    ['id_card'] = { 
+        ['name'] = 'id_card' -- اسم الايتم و يستعمل الكود لسباون ايضا
+        ['label'] = 'ID Card', -- اسم الايم في الحقيبة و يمكن تعريبه
+        ['weight'] = 0, -- حجم الايتم
+        ['type'] = 'item', -- (item او weapon)
+        ['image'] = 'id_card.png', -- اسم الصورة و يجب اضافة الصور في qb-inventory/html/images
+        ['unique'] = true, -- يمكن وضع الاعدد فوق بعضه
+        ['useable'] = true, -- اد كان الايتم يمكن استعماله في الحقيبة
+        ['shouldClose'] = false, -- عند استعماله يغل الحقيبة او لا
+        ['combinable'] = nil, --  اد كان يمكن دمجه او لا (nil / table)
+        ['description'] = '' -- وصف العنصر
+    }
+}
+
+# مثال على عنصر قابل لدمج
+['combinable'] = {
+    accept = {'snspistol_part_1'}, -- يمكن دمج العنصر الآخر الذي يمكن أن يكون عليه
+    reward = 'snspistol_stage_1', -- عند الجمع على مادا يحصل
+    anim = { -- توقيت و حركة التصنيع او الدمج
+        ['dict'] = 'anim@amb@business@weed@weed_inspecting_high_dry@', -- الانميشن
+        ['lib'] = 'weed_inspecting_high_base_inspector', --مكتبة الانميشن
+        ['text'] = 'Atttaching attachments', -- الكتابة التي تظهر في شريط البرغرس بار
+        ['timeOut'] = 15000,} -- كم ياخد وقت ليتصنع
+    }
+}
+
+# اضافة سلاح
+QBShared.Weapons = {
+    [`weapon_pistol`] = { -- هاش السلاح
+        ['name'] = 'weapon_pistol', -- اسم السلاح
+        ['label'] = 'Walther P99', -- اسم الايم في الحقيبة و يمكن تعريبه
+        ['weight'] = 1000, -- حجم
+        ['type'] = 'weapon', -- يجب ان يكون سلاح
+        ['ammotype'] = 'AMMO_PISTOL', -- الرصاص الدي يقبله
+        ['image'] = 'weapon_pistol.png', -- صورة السلاح
+        ['unique'] = true, -- يمكن جمعه فوق بعض
+        ['useable'] = false, -- يمكن استعماله
+        ['description'] = '' -- شرح
+    }
+}
+
+# اضافة عصابة
+QBShared.Gangs = {
+    ['mynewgang'] = { --  اسم العصابة ملتصق
+        label = 'My Fancy Gang Name', -- اسم العصابة
+        grades = {
+            ['0'] = { -- الرتب و اسمها
+                name = 'I am grade 0'
+            },
+            ['1'] = {
+                name = 'I am grade 1'
+            },
+            ['2'] = {
+                name = 'I am grade 2'
+            },
+            ['3'] = {
+                name = 'I am grade 3',
+                isboss = true -- يجب ان تضعها في الرتبة الاخيرة لتسمح له بفتح قائمة التحكم بالعصابة
+            },
+        },
+    }
+}
+
+# اضافة سيارة
+# لملاحظة كود السيارة و السباون و الهاش يجب ان يكون نفسه
+QBShared.Vehicles = {
+    ['adder'] = { -- كود السيارة
+        ['name'] = 'Adder', -- اسم السيارة
+        ['brand'] = 'Truffade', -- نوع السيارة
+        ['model'] = 'adder', -- كود السباون
+        ['price'] = 280000, -- ثمن السيارة
+        ['category'] = 'super', -- نوع السيارة و يبج توفرع في السكريبت qb-vehicleshop
+        ['hash'] = `adder`, -- هاش السيارة
+        ['shop'] = 'pdm', -- المتجر الدي تريد ان تظع به السيارة و يمكن معرفة اسمه من السكريبت qb-vehicleshop
+    }
+}
+
+# اضافة عمل
+QBShared.ForceJobDefaultDutyAtLogin = true
+QBShared.Jobs = {
+    ['police'] = { -- اسم العمل
+        label = 'Law Enforcement', -- اسم العمل الدي يظهر
+        defaultDuty = true, -- يكون داخل الخدمة تلقائيا
+        grades = {
+            ['0'] = {
+                name = 'Recruit', -- الرتب
+                payment = 50 -- الراتب
+            },
+            ['1'] = {
+                name = 'Officer',
+                payment = 75
+            },
+            ['2'] = {
+                name = 'Sergeant',
+                payment = 100
+            },
+            ['3'] = {
+                name = 'Lieutenant',
+                payment = 125
+            },
+            ['4'] = {
+                name = 'Chief',
+                isboss = true, -- الحصول على مينو التحكم بالوظيفة
+                payment = 150
+            },
+        },
+    },
