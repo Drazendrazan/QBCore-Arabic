@@ -1,0 +1,35 @@
+يمكن استعمال اي من mysql / ghmattimysql / oxmysql
+
+ghmattimysql:execute('UPDATE... >>> oxmysql:execute('UPDATE...
+
+ghmattimysql:execute('DELETE... >>> oxmysql:execute('DELETE...
+
+ghmattimysql:execute('SELECT... >>> oxmysql:fetch('SELECT...
+
+ghmattimysql:execute('INSERT... >>> oxmysql:insert('INSERT...
+
+['ghmattimysql']:execute('UPDATE... >>> .oxmysql:execute('UPDATE...
+
+['ghmattimysql']:execute('DELETE... >>> .oxmysql:execute('DELETE...
+
+['ghmattimysql']:execute('SELECT... >>> .oxmysql:fetch('SELECT...
+
+['ghmattimysql']:execute('INSERT... >>> .oxmysql:insert('INSERT...
+
+exports.ghmattimysql.execute >>> exports.oxmysql:execute
+
+exports.ghmattimysql.executeSync >>> exports.oxmysql:executeSync
+
+exports.ghmattimysql.scalar >>> exports.oxmysql:scalar
+
+exports.ghmattimysql.scalarSync >>> exports.oxmysql:scalarSync
+
+MySQL.Async.execute >>> exports.oxmysql:execute
+
+MySQL.Async.fetchAll >>> exports.oxmysql:execute
+
+MySQL.Sync.fetchAll >>> exports.oxmysql:executeSync
+
+MySQL.Async.fetchScalar >>> exports.oxmysql:scalar
+
+MySQL.Async.insert >>> exports.oxmysql:insert
