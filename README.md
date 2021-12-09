@@ -1,6 +1,3 @@
-# QBCore-Arabic
-QBCoreشرح أساسيات بالعربي ل
-
 لدخول الديسكورد
 • https://discord.gg/qbcore
 
