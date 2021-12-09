@@ -1,0 +1,96 @@
+# Client بالنسبة لـ
+
+esx:onPlayerDeath -> hospital:server:SetDeathStatus
+esx:playerLoaded -> QBCore:Client:OnPlayerLoaded
+esx:showAdvancedNotification -> QBCore:Notify
+esx:showHelpNotification -> QBCore:Notify
+esx:showNotification -> QBCore:Notify
+ESX.GetPlayerData -> QBCore.Functions.GetPlayerData
+ESX.IsPlayerLoaded -> غير متوفر
+ESX.SetPlayerData -> QBCore:Player:SetPlayerData
+ESX.TriggerServerCallback -> QBCore.Functions.TriggerCallback
+ESX.Game.DeleteObject -> FiveM native DeleteEntity استعمل
+ESX.Game.DeleteVehicle -> QBCore.Functions.DeleteVehicle
+ESX.Game.GetClosestObject -> FiveM native GetClosestObjectOfType استعمل
+ESX.Game.GetClosestPed -> QBCore.Functions.GetClosestPed
+ESX.Game.GetClosestPlayer -> QBCore.Functions.GetClosestPlayer
+ESX.Game.GetClosestVehicle -> QBCore.Functions.GetClosestVehicle
+ESX.Game.GetObjects -> غير متوفر
+ESX.Game.GetPedMugshot -> FiveM native RegisterPedheadshot استعمل
+ESX.Game.GetPeds -> غير متوفر
+ESX.Game.GetPlayers -> QBCore.Functions.GetPlayers
+ESX.Game.GetPlayersInArea -> غير متوفر
+ESX.Game.GetVehicleInDirection -> غير متوفر
+ESX.Game.GetVehicles -> QBCore.Functions.GetVehicles
+ESX.Game.GetVehiclesInArea -> غير متوفر
+ESX.Game.IsSpawnPointClear -> getvehiclesinarea استعمل
+ESX.Game.SetVehicleProperties -> QBCore.Functions.SetVehicleProperties
+ESX.Game.SpawnLocalObject -> غير متوفر
+ESX.Game.SpawnLocalVehicle -> غير متوفر
+ESX.Game.SpawnObject -> FiveM Native CreateObject استعمل
+ESX.Game.SpawnVehicle -> QBCore.Functions.SpawnVehicle
+ESX.Game.Teleport -> FiveM Native SetEntityCoords / SetEntityHeading استعمل
+ESX.Game.Utils.DrawText3D -> DrawText3D
+
+# Server بالنسبة
+
+ESX.CreatePickup -> غير متوفر
+ESX.GetItemLabel -> غير متوفر
+ESX.GetPlayerFromId -> QBCore.Functions.GetPlayer
+ESX.GetPlayerFromIdentifier -> QBCore.Functions.GetPlayerByCitizenId
+ESX.GetPlayers -> QBCore.Functions.GetPlayers
+ESX.RegisterServerCallback -> QBCore.Functions.CreateCallback
+ESX.RegisterUsableItem -> QBCore.Functions.CreateUseableItem
+ESX.SavePlayer -> QBCore.Player.Save
+ESX.SavePlayers -> غير متوفر
+ESX.Trace -> QBCore.Debug
+ESX.UseItem -> QBCore.Functions.UseItem
+xPlayer.addAccountMoney -> xPlayer.Functions.AddMoney (account)
+xPlayer.addInventoryItem -> xPlayer.Functions.AddItem (item)
+xPlayer.addMoney -> xPlayer.Functions.AddMoney (cash)
+xPlayer.addWeapon -> xPlayer.Functions.AddItem (weapon)
+xPlayer.addWeaponAmmo -> xPlayer.Functions.AddItem (ammo)
+xPlayer.addWeaponComponent -> xPlayer.Functions.AddItem (component)
+xPlayer.canCarryItem -> xPlayer.Functions.AddItem اصلا توفرها
+xPlayer.canSwapItem -> xPlayer.Functions.AddItem اصلا توفرها
+xPlayer.getAccount -> غير متوفر
+xPlayer.getAccounts -> غير متوفر
+xPlayer.getCoords -> FiveM Native GetEntityCoords استعمل
+xPlayer.getGroup -> xPlayer.Functions.GetPermission
+xPlayer.getIdentifier -> xPlayer.Functions.GetIdentifier
+xPlayer.getInventory -> QBCore.Player.LoadInventory
+xPlayer.getInventoryItem -> xPlayer.Functions.GetItemByName
+xPlayer.getJob -> غير متوفر
+xPlayer.getLoadout -> غير متوفر
+xPlayer.getMoney -> غير متوفر
+xPlayer.getName -> غير متوفر
+xPlayer.getWeapon -> xPlayer.Functions.GetItemByName (weapon)
+xPlayer.getWeight -> xPlayer.Player.GetTotalWeight
+xPlayer.hasWeapon -> xPlayer.Functions.GetItemByName (weapon)
+xPlayer.hasWeaponComponent -> xPlayer.Functions.GetItemByName (component)
+xPlayer.kick -> xPlayer.Functions.Kick
+xPlayer.removeAccountMoney -> xPlayer.Functions.RemoveMoney (account)
+xPlayer.removeInventoryItem -> xPlayer.Functions.RemoveItem (item)
+xPlayer.removeMoney -> xPlayer.Functions.RemoveMoney (cash)
+xPlayer.removeWeapon -> xPlayer.Functions.RemoveItem (weapon)
+xPlayer.removeWeaponAmmo -> xPlayer.Functions.RemoveItem (ammo)
+xPlayer.removeWeaponComponent -> xPlayer.Functions.RemoveItem (component)
+xPlayer.setAccountMoney -> xPlayer.Functions.SetMoney (account)
+xPlayer.setCoords -> غير متوفر
+xPlayer.setInventoryItem -> xPlayer.Functions.AddItem (item)
+xPlayer.setJob -> xPlayer.Functions.SetJob
+xPlayer.setMaxWeight -> اصلا متواجدة في qb-core
+xPlayer.setMoney -> xPlayer.Functions.SetMoney
+xPlayer.setName -> غير متوفر
+xPlayer.setWeaponTint -> متوفر في qb-weapon
+xPlayer.showHelpNotification -> TriggerClientEvent('QBCore:Notify')
+xPlayer.showNotification -> TriggerClientEvent('QBCore:Notify')
+xPlayer.triggerEvent -> غير متوفر
+xPlayer.updateCoords -> غير متوفر
+
+esx:setJob -> QBCore:Client:OnJobUpdate
+esx:onPlayerSpawn -> QBCore:Client:OnPlayerLoaded
+playerSpawned -> QBCore:Client:OnPlayerLoaded (spawnmanager)
+esx:addInventoryItem -> QBCore:Server:AddItem
+esx:removeInventoryItem -> QBCore:Server:RemoveItem
+esx:useItem -> QBCore:Server:UseItem
