@@ -1,0 +1,62 @@
+أولا بتحتاج تنزل سكريبت التارغت مع البولي زون
+
+qb-target --> https://github.com/BerkieBb/qb-target
+PolyZone --> https://github.com/mkafrin/PolyZone
+
+--------------------------- PolyZone ---------------------------
+Zones --> اماكن متعددة
+PolyZone --> زون محدد
+CircleZone --> دائرة محددة
+BoxZone --> بوكس زون
+
+لإنشاء زون محددة تكتب أمر
+The /pzcreate {poly,box,circle}
+و كمل الاعدادات الثانية
+-----------
+name --> اسم
+length --> الطول
+width --> العرض
+----------
+
+التحكم بالماوس و الكيبورد
+CircleZone
+Z - Changes useZ option to switch between circle and sphere modes
+Scroll Wheel - Changes radius
+Alt + Scroll Wheel - Changes height/Z (if in sphere mode)
+Arrow keys - Moves center based on camera rotation (up is always forward from the camera, down is towards the camera, etc.)
+Ctrl - Hold with any of the above to make them slower
+
+BoxZone
+Arrow keys - Same as CircleZone
+Ctrl + Arrow keys - Same as CircleZone
+Z - Changes between "Scale and rotation" and "Height" modes
+
+Scale and rotation mode
+Scroll Wheel - Changes heading/rotation
+Alt + Scroll Wheel - Changes width
+Shift + Scroll Wheel - Changes length
+Ctrl - Hold with any of the above to make them slower
+
+Height mode
+Scroll Wheel - Changes Z position of the center of the zone
+Alt + Scroll Wheel - Changes minZ of the zone
+Shift + Scroll Wheel - Changes maxZ of the zone
+Ctrl - Hold with any of the above to make them slower
+
+PolyZone
+/pzadd - اضافة نقطة للبولي زون
+/pzundo -حدف النقطة السابيقة
+/pzfinish - انهاء الشغل
+
+تلقي المعلومات خارج الريسورسز مع server.cfg
+polyzone_created_zones.txt
+
+--------------------------- QB-TARGET ---------------------------
+اولا اد بدك أمثلة روح اتعلم هون
+https://github.com/BerkieBb/qb-target/blob/main/EXAMPLES.md
+
+الامر لستعملناه في الفيديو السابق
+
+RegisterNetEvent('')
+AddEventHandler('', function()
+end)
