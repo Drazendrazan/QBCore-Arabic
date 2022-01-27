@@ -33,3 +33,37 @@ MySQL.Sync.fetchAll >>> exports.oxmysql:executeSync
 MySQL.Async.fetchScalar >>> exports.oxmysql:scalar
 
 MySQL.Async.insert >>> exports.oxmysql:insert
+
+# last update
+
+exports.oxmysql:executeSync >>> MySQL.Sync.fetchAll
+
+exports.oxmysql:update >>> MySQL.Async.execute
+
+exports.oxmysql:execute >>> MySQL.Async.execute
+
+exports.oxmysql:fetch  >>> MySQL.Async.fetchAll 
+
+exports.oxmysql:fetchSync >>> MySQL.Sync.fetchAll
+
+exports.oxmysql:scalar >>> MySQL.Async.fetchScalar
+
+exports.oxmysql:scalarSync >>> MySQL.Sync.fetchScalar
+
+exports.oxmysql:updateSync >>> MySQL.Sync.execute
+
+exports.oxmysql:insert >>>  MySQL.Async.insert
+
+exports.oxmysql:insertSync >>> MySQL.Sync.insert
+
+exports.oxmysql:transaction >>> MySQL.Async.transaction
+
+exports.oxmysql:transactionSync >>> MySQL.Sync.transaction
+
+exports.oxmysql:single >>> MySQL.Async.fetchSingle
+
+exports.oxmysql:singleSync >>> MySQL.Sync.fetchSingle
+
+exports.oxmysql:prepare >>>   MySQL.Async.prepare
+
+exports.oxmysql:prepareSync >>> MySQL.Sync.prepare
