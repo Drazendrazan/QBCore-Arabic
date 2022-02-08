@@ -1,4 +1,4 @@
-# QBCore Arabic ترجمة و اضافات و كل ما يحتاجه المبرمج العربي
+# QBCore ترجمة و اضافات و كل ما يحتاجه المبرمج العربي
 - [x] ESX --> QBCore تحويلات
 - [x] SQL --> [oxmysql](https://github.com/overextended/oxmysql/) [ghmattimysql](uayster/ghmattimysql) MySQL تحويلات الجديدة
 - [x] CGF --> شرح اوامر الخاصة ب السرفر CFG
