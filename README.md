@@ -5,8 +5,9 @@
 - [x] Commands --> كل الكومندات مع شرحها
 - [x] Shared --> QBCoreشرح شاد المعلومات الخاص بـ
 - [x] Target --> نظام العين و شروحاته
-- [x] Templet --> كيف تقدر تصمم سكريبت
+- [x] Template --> كيف تقدر تصمم سكريبت
+- [x] MENU --> تحديث المينو
 - [ ] Font --> SOON
-- [ ] MENU --> SOON
+- [ ] ESX MENU --> SOON
 
 ## BY: El Vod Kaa#1234
