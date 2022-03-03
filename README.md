@@ -8,4 +8,4 @@
 - [ ] Font --> SOON
 - [ ] MENU --> SOON
 
-## BY: ElVodKaa#1234
+## BY: El Vod Kaa#1234
